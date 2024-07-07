@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" data-template="home">
+
+<head>
+  <meta charset="UTF-8">
+  <title>SHOOLESS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="description" />
+  <link href="https://db.onlinewebfonts.com/a/Ah3yF1zAxYBkk2bmbIgEp2M7ZPqM52mitPJKY1Yn9MAtV0An6aMIh1INjd96Z3VjgVw3812MP3L0R3eMyITJ8eyMoWCa52vqgeAL17nY" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="lightbox.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+   <link rel="icon" type="image/svg+xml" href="">
+  <!-- <link rel="mask-icon" href="" color="#000000" /> -->
+  <link href="style.css" rel="stylesheet">
+</head>
+
+  <body onload="loadingPage()" style="margin:0;">
+   <div id="overlay">
+     <div id="box">
+       <span id="text1"></span>
+       <span id="text2"></span>
+     </div>
+   </div>
+    <!-- The SVG filter used to create the merging effect -->
+    <svg id="filters">
+      <defs>
+        <filter id="threshold">
+          <!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
+          <feColorMatrix in="SourceGraphic"
+              type="matrix"
+              values="1 0 0 0 0
+                      0 1 0 0 0
+                      0 0 1 0 0
+                      0 0 0 255 -140" />
+        </filter>
+      </defs>
+    </svg>
+    
+  <header class="header">
+    <!-- <a class="back" href="#">&#8668;</a> -->
+    <a class="logo" href="#index">SHOOLESS</a>
+  </header>
+    <button onclick="topFunction()" id="topBtn" title="Go to top">&#11014;</button>
+    <div class="iconBar">
+      <a href="#"><i class="fa fa-instagram"></i></a> 
+      <a href="#"><i class="fa fa-bandcamp"></i></a> 
+      <a href="#"><i class="fa fa-spotify"></i></a>
+      <a href="#"><i class="fa fa-youtube"></i></a><br>
+       </div>
+ 
+  <div class="info-title">
+    <div class="text-wrap">
+       <!-- <p>Shooless brings a sound and finesse that defies the status quo, from soaring rock to delicate jazz, embodying authenticity and sonic exploration.</p> -->
+    </div>
+  </div>
+
+  <div class="project-titles">
+
+     <div class="project-titles__title" data-index="2">
+       <div class="text-wrap"><p>Shooless brings a sound and finesse that defies the status quo, from soaring rock to delicate jazz, embodying authenticity and sonic exploration.</p></div></div>
+        <!-- <img class="overlay-img" src="https://i.ibb.co/mNyPCnj/pen-1.png" alt="about">
+        </div> -->
+    <div class="project-titles__title" data-index="3">
+      <span class="year">01</span>
+      <span class="scrollButton">About</span>
+    
+    </div>
+    <div class="project-titles__title" data-index="4">
+      <div class="text-wrap"><p>Led by Guy Yarrall and Freya Pinkerton on vocals, Shooless is fueled by William Abraham on bass, Jordan Neal on drums, and Locky Buchanan on lead guitar.</p></div>
+    </div>
+  
+    <div class="project-titles__title" data-index="5">
+      <span class="year">02</span>
+      <span class="scrollButton">Press</span>
+    </div>
+    <div class="project-titles__title" data-index="6">
+      <img class="overlay-img" src="https://i.ibb.co/VwWXgwh/pen-2.png" alt="press">
+    </div>
+    <div class="project-titles__title" data-index="7">
+      <span class="year">03</span>
+      <span class="scrollButton">Music</span>
+     
+    </div>
+    <div class="project-titles__title" data-index="8">
+       <div class="text-wrap"><p>They frequent venues across the Tāmaki Makaurau live scene, captivating audiences with their energetic performances. And with highly anticipated shows across Aotearoa they're an act you don’t want to miss.</p></div>
+    </div>
+    <div class="project-titles__title" data-index="9">
+      <span class="year">04</span>
+      <span class="scrollButton">Gallery</span>
+    </div>
+    <div class="project-titles__title" data-index="10">
+      <img class="overlay-img" src="https://i.ibb.co/wLM3RHp/pen-3.png" alt="music">
+      
+    </div>
+    <div class="project-titles__title" data-index="11">
+      <span class="year">05</span>
+      <span class="scrollButton">Contact</span>
+    </div>
+  </div>
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+
+      <div class="project-images">
+
+        <img src="https://i.ibb.co/wYGLb66/img43.jpg"
+          class="project-images__image project-images__image--0 project-images__image--landscape" data-index="0">
+
+        <img src="https://i.ibb.co/Gn9RpCQ/Artboard-11.png"
+          class="project-images__image project-images__image--1 project-images__image--landscape" data-index="1"
+          data-blend-mode="Multiply">
+        <img src="https://i.ibb.co/CzyQbHN/Copy-of-000051.jpg"
+          class="project-images__image project-images__image--2 project-images__image--landscape" data-index="2"
+          data-blend-mode="Lighten">
+        <img src="https://i.ibb.co/Ph3tQzf/bfm.png"
+          class="project-images__image project-images__image--1 project-images__image--landscape" data-index="3"
+          data-blend-mode="Lighten">
+        <img src="https://i.ibb.co/YptQQYt/Copy-of-000066.jpg" class="project-images__image project-images__image--2 "
+          data-index="4" data-blend-mode="Difference">
+        <img src="https://i.ibb.co/fM9FhMR/Copy-of-000069.jpg"
+          class="project-images__image project-images__image--1 project-images__image--landscape" data-index="5"
+          data-blend-mode="Difference">
+        <img src="https://i.ibb.co/Khp6KGh/000044.jpg"
+          class="project-images__image project-images__image--2 project-images__image--landscape" data-index="6"
+          data-blend-mode="Lighten">
+        <img src="https://i.ibb.co/Vq0JSsG/Copy-of-000004-1.jpg"
+          class="project-images__image project-images__image--1 project-images__image--landscape" data-index="7"
+          data-blend-mode="Lighten">
+        <img src="https://i.ibb.co/r35P0WF/face.png" class="project-images__image project-images__image--2 "
+          data-index="8" data-blend-mode="Lighten">
+        <img src="https://i.ibb.co/1dD1QM7/img45.jpg"
+          class="project-images__image project-images__image--1 project-images__image--landscape" data-index="9"
+          data-blend-mode="Soft Light">
+        <img src="https://i.ibb.co/jJ4jwqN/feet.png"
+          class="project-images__image project-images__image--2 project-images__image--landscape" data-index="10"
+          data-blend-mode="Lighten">
+       
+      </div>
+      
+      <div class="info" id="index">
+          <div class="info__inner">
+
+            
+
+
+            <div class="info__index index">
+            
+
+              <div class="index__header">Contents</div><br>
+              
+              <div class="index__list">
+                
+                <div class="index__item drawer-item drawer-item--with-content"
+                  id="about">
+                  <a href="#about" class="drawer-item__header">
+                    <span class="year">01</span>
+                    <span class="title">About</span>
+                  
+                  </a>
+                  
+                  <div class="drawer-item__content text-wrap">
+                    
+                    <p>Shooless brings a sound and finesse that defies the status quo, from soaring rock to delicate jazz, embodying authenticity and sonic exploration. Led by Guy Yarrall and Freya Pinkerton on vocals, Shooless is fueled by William Abraham on bass, Jordan Neal on drums, and Locky Buchanan on lead guitar. What started with spontaneous jams in a West Auckland storage unit has blossomed into a dynamic musical force, inspired by artists such as Jeff Buckley, King Krule, Patti Smith, Mastadon, Jefferson Airplane, Rage Against the Machine, and PJ Harvey. They frequent venues across the Tāmaki Makaurau live scene, captivating audiences with their energetic performances. And with highly anticipated shows across Aotearoa they're an act you don’t want to miss. Their latest single 'Sunsets' is an absorbing preview of what's to come from their forthcoming album. Each track promises to unravel a narrative of personal struggle, self-reflection, and eventual resolution.</p><br>
+                  </div>
+                </div>
+                <div class="index__item drawer-item drawer-item--with-content"
+                  id="press">
+                  <a href="#press" class="drawer-item__header">
+                    <span class="year">02</span>
+                    <span class="title">Press</span></a>
+                  
+                  <div class="drawer-item__content text-wrap">
+                    <div class="row">
+                      <div class="column">
+                         <h2>Podcasts & Radio Interviews:</h2>
+                        <div class="card">
+                          <a href="https://95bfm.com/bcast/fancy-new-band-with-shooless-friday-r%C4%81mere-8-september"target="_blank">Shooless on 95bfm Fancy New Band</a><br>
+                          <audio controls="controls" controlslist="nodownload" preload="metadata" src="https://95bfm.com/sites/default/files/080923_Fancy_New_Band.mp3">&nbsp;</audio><br><br>
+                           <a href="https://95bfm.com/bcast/a-k%C5%8Drero-w-shooless-april-22-2024"target="_blank">‘A kōrero with Shooless’ 95bfm Interview</a><br>
+                           <audio controls="controls" controlslist="nodownload" preload="metadata" src="https://95bfm.com/sites/default/files/Shooless%20IV.mp3">&nbsp;</audio><br><br>
+                          
+                        </div>
+                    
+                      </div>
+
+                      
+                      <div class="column">
+                        <h2>Articles:</h2>
+                        <div class="card">
+                          <a href="https://13thfloor.co.nz/shooless-a-track-by-track-rundown-of-their-new-ep/"target="_blank">The 13th Floor, Shooless Track by Track Rundown</a><br>
+                           <a href="https://issuu.com/ausm/docs/debate_issue_8_-_online/20"target="_blank">Debate Magazine ‘Fairy Kisses from Shooless’</a><br>
+                          <a href="https://ponsonbynews.co.nz/article-detail/show/3775/"target="_blank">Ponsonby News</a>  
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="column">
+                        <div class="card">
+                           <img src="https://i.ibb.co/VmkmK3X/quote2.png"class="quote-image">
+                         
+                        </div>
+                      </div>
+
+
+                      <div class="column">
+                        <div class="card">
+                           <img src="https://i.ibb.co/w4wLQ3c/quote1.png"class="quote-image">
+                          <!-- <figure class="quote">
+                            <blockquote>
+                         "Different genre swords from jazz fusion and trip hop cut the ephemeral idea into perfected audio cathedrals."</blockquote>
+                              <figcaption>
+                                &mdash; Floyd Lee, <cite>The 13th Floor</cite></figcaption>
+                                </figure> -->
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <span class="gap"></span>
+                  </div>
+                </div>
+                <div class="index__item drawer-item drawer-item--with-content" id="music">
+                  <a href="#music" class="drawer-item__header">
+                    <span class="year">03</span>
+                    <span class="title">Music</span>
+                  </a>
+                  <div class="drawer-item__content text-wrap">
+                    <span class="gap"></span>
+                    <div class="row">
+                      <div class="column">
+                        <div class="card">
+                          <h3>Sunsets</h3>
+                          <p>(Latest Single)</p><br>
+                       <div style="max-width: 700px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 100%;"><iframe src="https://bandcamp.com/EmbeddedPlayer/size=large/bgcol=333333/linkcol=ffffff/minimal=true/track=3748770334/transparent=true/" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no"></iframe></div></div>
+                        </div>
+                      </div>
+
+
+                      <div class="column">
+                        <div class="card">
+                           <h3>Shooless</h3>
+                          <p>(Self-Titled EP)</p><br>
+                         
+                          <div style="max-width: 700px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 100%;"><iframe src="https://bandcamp.com/EmbeddedPlayer/album=1926821684/size=large/bgcol=333333/linkcol=ffffff/minimal=true/transparent=true/" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no"></iframe></div></div>
+                          
+                        </div>
+                      </div>
+                      <br>
+                       <div class="column-1"><br>
+                  <br><br><h3>Live from The Tuning Fork!</h3><br>
+                    <div class="container"> 
+                      <iframe class="responsive-iframe" src="https://www.youtube.com/embed/w64XINigqEc?si=r3sVmHdSq6Vfe9iL&amp;controls=0" allowfullscreen></iframe></div><span class="gap"></span>
+                       </div>
+                      <div class="row">
+                        <h3>Upcoming Releases:</h3><br>
+                        <span style="color:grey">
+                        <p>Single ‘Debt’ (Date TBC)</p>
+                        <p>Single ‘Lonely Playground’ (Date TBC)</p>
+                        <p>Studio Album (Date & Name TBC)</p></span><br>
+                         
+
+                      </div>
+                      </div>
+                    <span class="gap"></span>
+                </div>
+                </div>
+                <div class="index__item drawer-item drawer-item--with-content" id="gallery">
+                  <a href="#gallery" class="drawer-item__header"><span class="year">04</span>
+                    <span class="title">Gallery</span>
+                  </a>
+                  <div class="drawer-item__content text-wrap">
+                    <span class="gap"></span>
+                    <div class="gallery-container">
+                        <div class="gallery-item" data-index="1">
+                          <img src="https://i.ibb.co/CsF5Sd7/Hero-Image-Shooles.jpg" alt="one">
+                         
+                        </div>
+                        <div class="gallery-item" data-index="2">
+                            <img src="https://i.ibb.co/DgT9S54/350245853-222462840552752-4837841848165272985-n.jpg"alt="one">
+                        </div>
+                        <div class="gallery-item" data-index="3">
+                            <img src="https://i.ibb.co/k5f82JV/img54.jpg"alt="one">
+                        </div>
+                        <div class="gallery-item" data-index="4">
+                            <img src="https://i.ibb.co/GPmkrHz/IMG-3245-1.jpg"alt="one">
+                        </div>
+                        <div class="gallery-item" data-index="5">
+                            <img src="https://i.ibb.co/CzyQbHN/Copy-of-000051.jpg"alt="one">
+                        </div>
+                        <div class="gallery-item" data-index="6">
+                            <img src="https://i.ibb.co/P4M3R9G/000045.jpg"alt="one">
+                        </div>
+                        <div class="gallery-item" data-index="7">
+                            <img src="https://i.ibb.co/cbsJjPg/Copy-of-000004-1.jpg"alt="one">
+                        </div>
+                        <div class="gallery-item" data-index="8">
+                            <img src="https://i.ibb.co/YptQQYt/Copy-of-000066.jpg"alt="one">
+                        </div>
+                        <div class="gallery-item" data-index="9">
+                            <img src="https://i.ibb.co/hLbn5Ty/Copy-of-000067.jpg"alt="one">
+                        </div>
+                      <div class="gallery-item" data-index="10">
+                          <img src="https://i.ibb.co/wgDfdRt/Copy-of-000046.jpg"alt="one">
+                      </div>
+                      <div class="gallery-item" data-index="11">
+                          <img src="https://i.ibb.co/6J2bMZX/Copy-of-000002-1.jpg"alt="one">
+                      </div>
+                      <div class="gallery-item" data-index="12">
+                          <img src="https://i.ibb.co/DCbcFg7/Copy-of-000006.jpg"alt="one">
+                      </div>
+                    </div>
+                    <span class="gap"></span>
+                </div>
+          
+              
+              </div>
+              
+            </div>
+               <!-- <span class="gap"></span> -->
+              <div class="footer">
+            <div class="info__persons persons persons--1">
+              <div class="persons__person person">
+                Contact:<br>
+                <a href="mailto:shoolessband@gmail.com">shoolessband@gmail.com</a><br><br><br><br><br><br>
+              </div>
+             
+            </div>
+                </div>
+              
+    
+      </div>
+    </div>
+        
+    </div>
+      
+  </div>
+
+    <script src="main.min.js"></script>
+     <script src="script.js"></script>
+</body>
+
+</html>
